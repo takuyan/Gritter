@@ -20,8 +20,8 @@
   * Set up global options that the user can over-ride
   */
   $.gritter.options = {
-        position: '',
-        class_name: '', // could be set to 'gritter-light' to use white notifications
+    position: '',
+    class_name: '', // could be set to 'gritter-light' to use white notifications
     fade_in_speed: 'medium', // how fast notifications fade in
     fade_out_speed: 1000, // how fast the notices fade out
     time: 6000 // hang on the screen for...
@@ -69,7 +69,7 @@
   var Gritter = {
 
     // Public - options to over-ride with $.gritter.options in "add"
-        position: '',
+    position: '',
     fade_in_speed: '',
     fade_out_speed: '',
     time: '',
@@ -105,7 +105,7 @@
         image = params.image || '',
         sticky = params.sticky || false,
         item_class = params.class_name || $.gritter.options.class_name,
-                position = $.gritter.options.position,
+        position = params.position || $.gritter.options.position,
         time_alive = params.time || '';
 
       this._verifyWrapper();
